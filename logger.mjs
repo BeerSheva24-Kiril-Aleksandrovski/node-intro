@@ -1,7 +1,11 @@
-import winston from "winston";
+import winston from 'winston'
+
 const logger = winston.createLogger({
-    level: process.env.LEVEL ?? "info",
+    level:process.env.LEVEL ?? 'info',
     format: winston.format.simple(),
-    transports: [new winston.transports.Console()],
-});
+    transports: [
+        new winston.transports.Console
+    ]
+
+})
 export default logger;
